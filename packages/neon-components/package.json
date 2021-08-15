@@ -1,0 +1,33 @@
+{
+  "name": "neon-components",
+  "version": "1.0.0",
+  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "keywords": [],
+  "author": "diliburong <diliburong@126.com>",
+  "license": "ISC",
+  "main": "lib/neon-components.js",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diliburong/neon.git"
+  },
+  "scripts": {
+    "storybook": "wds -c .storybook/server.mjs",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/diliburong/neon/issues"
+  },
+  "homepage": "https://github.com/diliburong/neon#readme",
+  "devDependencies": {
+    "@open-wc/dedupe-mixin": "^1.3.0",
+    "@open-wc/testing": "^2.5.33",
+    "@web/dev-server-storybook": "^0.3.7"
+  },
+  "dependencies": {
+    "@storybook/web-components": "^6.3.7",
+    "lit": "^2.0.0-rc.2"
+  }
+}

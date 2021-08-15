@@ -1,0 +1,12 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "@web/dev-server": "^0.1.20",
+    "@web/dev-server-esbuild": "^0.2.12",
+    "lerna": "^4.0.0"
+  },
+  "workspaces": [
+    "packages/**/*"
+  ]
+}
