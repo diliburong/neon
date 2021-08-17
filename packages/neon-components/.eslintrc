@@ -1,0 +1,87 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:lit/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "dot-notation": [
+            2,
+            {
+                "allowPattern": "^with$"
+            }
+        ],
+        "lines-around-comment": [
+            2,
+            {
+                "allowBlockStart": true,
+                "allowClassStart": true,
+                "allowObjectStart": true,
+                "beforeBlockComment": true,
+                "beforeLineComment": true
+            }
+        ],
+        "new-cap": [
+            2,
+            {
+                "capIsNewExceptions": [
+                    "ApolloClientMixin",
+                    "EaMixin"
+                ]
+            }
+        ],
+        "require-jsdoc": [
+            2,
+            {
+                "require": {
+                    "FunctionDeclaration": true,
+                    "MethodDefinition": true,
+                    "ClassDeclaration": false,
+                    "FunctionExpression": false,
+                    "ArrowFunctionExpression": false
+                }
+            }
+        ],
+        "strict": [
+            2,
+            "global"
+        ],
+        "newline-after-var": "off",
+        "no-console": 2,
+        "eol-last": 2,
+        "no-multiple-empty-lines": 2,
+        "no-trailing-spaces": 2,
+        "semi": [
+            2,
+            "always"
+        ],
+        "semi-spacing": [
+            2,
+            {
+                "before": false,
+                "after": true
+            }
+        ],
+        "no-prototype-builtins": "off",
+        "@typescript-eslint/ban-types": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-non-null-assertion": "off"
+    }
+}

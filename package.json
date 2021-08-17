@@ -1,10 +1,25 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "lint": "lerna run lint"
+  },
   "devDependencies": {
     "@web/dev-server": "^0.1.20",
     "@web/dev-server-esbuild": "^0.2.12",
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^11.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lerna run lint"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "lerna run lint"
+    ]
   },
   "workspaces": [
     "packages/**/*"

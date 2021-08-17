@@ -349,4 +349,4 @@ const normalizeStyles = css`
 
 export const baseStyles = css`
     ${normalizeStyles}
-`
+`;

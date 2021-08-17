@@ -1,7 +1,7 @@
 import { html, TemplateResult } from 'lit-html';
 import './button';
-import { ButtonProps } from './button'
-import { Story, Meta } from '@storybook/web-components';
+import { ButtonProps } from './button';
+import { Story } from '@storybook/web-components';
 
 export default {
     title: 'NeonButton',
@@ -43,9 +43,7 @@ export const Primary = Template.bind({});
 
 Primary.args  = {
     title: 'custom'
-}
-
-// export const Regular = Template.bind({});
+};
 
 export const CustomTitle = Template.bind({});
 CustomTitle.argTypes = {
@@ -59,4 +57,3 @@ SlottedContent.args = {
 SlottedContent.argTypes = {
     slot: { table: { disable: true } },
 };
-

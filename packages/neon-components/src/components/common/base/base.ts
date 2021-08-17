@@ -5,5 +5,5 @@ import { baseStyles } from './base.css';
 export class Base extends LitElement {
     static styles = [baseStyles];
 
-    @property({ type: String }) timingId?: String;
+    @property({ type: String }) timingId?: string;
 }

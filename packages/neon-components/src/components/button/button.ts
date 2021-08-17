@@ -1,4 +1,4 @@
-import {html, css } from 'lit';
+import { html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { Base } from '../common/base';
 
@@ -12,6 +12,9 @@ type ButtonLabelColor = 'light' | 'dark';
 
 @customElement('neon-button')
 export class NeonButton extends Base {
+    /**
+     * Static styles
+     */
     static get styles() {
         return [
             super.styles,
@@ -31,6 +34,9 @@ export class NeonButton extends Base {
     @property()
     textColor = 'blue';
 
+    /**
+     * Render
+     */
     render() {
         return html`
             <p>
@@ -46,4 +52,3 @@ declare global {
         'neon-button': NeonButton;
     }
 }
-
