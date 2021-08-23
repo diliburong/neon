@@ -3,11 +3,18 @@ import { esbuildPlugin } from '@web/dev-server-esbuild';
 /** Use Hot Module replacement by adding --hmr to the start command */
 const hmr = process.argv.includes('--hmr');
 
+// import { fromRollup } from "@web/dev-server-rollup";
+// import rollupJson from "@rollup/plugin-json";
+
+// const json = fromRollup(rollupJson);
+
 export default /** @type {import('@web/dev-server').DevServerConfig} */ ({
   nodeResolve: true,
   open: '/demo/',
   watch: !hmr,
-
+  // mimeTypes: {
+  //   "**/*.json": "js",
+  // },
   /** Compile JS for older browsers. Requires @web/dev-server-esbuild plugin */
   // esbuildTarget: 'auto'
 
@@ -20,6 +27,7 @@ export default /** @type {import('@web/dev-server').DevServerConfig} */ ({
   // },
 
   plugins: [
+    // json(),
     // transform TS, JSX, TSX and JSON to JS
     // ref: https://modern-web.dev/guides/dev-server/typescript-and-jsx/#typescript
     esbuildPlugin({ ts: true })

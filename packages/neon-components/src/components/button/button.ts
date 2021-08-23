@@ -1,4 +1,4 @@
-import { html, css } from 'lit';
+import { css, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { Base } from '../common/base';
 
@@ -26,7 +26,8 @@ export class NeonButton extends Base {
         ];
     }
 
-    @property({ reflect: true }) labelColor?: ButtonLabelColor;
+    @property({ reflect: true })
+    labelColor?: ButtonLabelColor;
 
     @property()
     title = 'Somebody';

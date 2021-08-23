@@ -1,0 +1,58 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "neon-button",
+      "path": "./src/components/button/button.ts",
+      "attributes": [
+        {
+          "name": "labelColor",
+          "type": "\"light\" | \"dark\" | undefined"
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "default": "\"Somebody\""
+        },
+        {
+          "name": "textColor",
+          "type": "string",
+          "default": "\"blue\""
+        },
+        {
+          "name": "timingId",
+          "type": "string | undefined"
+        }
+      ],
+      "properties": [
+        {
+          "name": "labelColor",
+          "attribute": "labelColor",
+          "type": "\"light\" | \"dark\" | undefined"
+        },
+        {
+          "name": "title",
+          "attribute": "title",
+          "type": "string",
+          "default": "\"Somebody\""
+        },
+        {
+          "name": "textColor",
+          "attribute": "textColor",
+          "type": "string",
+          "default": "\"blue\""
+        },
+        {
+          "name": "styles",
+          "type": "CSSResultGroup[]",
+          "default": "[\"baseStyles\"]"
+        },
+        {
+          "name": "timingId",
+          "attribute": "timingId",
+          "type": "string | undefined"
+        }
+      ]
+    }
+  ]
+}
