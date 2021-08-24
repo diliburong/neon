@@ -26,14 +26,12 @@ interface ArgTypes extends ButtonProps {
 
 export const Template: Story<ArgTypes> = ({
     title = 'Hello world',
-    counter = 5,
     textColor,
     slot,
     }: ArgTypes) => html`
     <neon-button
         style="--neno-element-text-color: ${textColor || 'black'}"
         .title=${title}
-        .counter=${counter}
     >
         ${slot}
     </neon-button>

@@ -39,8 +39,7 @@
             2,
             {
                 "capIsNewExceptions": [
-                    "ApolloClientMixin",
-                    "EaMixin"
+                    "LogMixin"
                 ]
             }
         ],

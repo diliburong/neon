@@ -11,6 +11,10 @@
 //   },
 // };
 
+export const parameters = {
+    controls: { expanded: true },
+};
+
 // export const globalTypes = {
 //     locale: {
 //       name: 'Locale',

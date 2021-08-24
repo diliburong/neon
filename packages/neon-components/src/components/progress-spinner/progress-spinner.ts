@@ -2,12 +2,12 @@ import { css, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { Base } from '../common/base';
 
-export interface SpinnerProps {
+export interface ProgressProps {
     value: number;
 }
 
 @customElement('neon-spinner')
-export class NeonSpinner extends Base {
+export class NeonProgressSpinner extends Base {
     /**
      * Static styles
      */
@@ -45,6 +45,6 @@ export class NeonSpinner extends Base {
 // get typings
 declare global {
     interface HTMLElementTagNameMap {
-        'neon-spinner': NeonSpinner;
+        'neon-progress-spinner': NeonProgressSpinner;
     }
 }

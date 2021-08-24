@@ -347,6 +347,10 @@ const normalizeStyles = css`
     /* stylelint-enable */
 `;
 
+const fontStyles = css`
+`;
+
 export const baseStyles = css`
     ${normalizeStyles}
+    ${fontStyles}
 `;
