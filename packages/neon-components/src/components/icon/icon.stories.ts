@@ -1,17 +1,15 @@
 import { html, TemplateResult } from 'lit-html';
 import './icon';
 import { IconProps } from './icon';
-import { Story } from '@storybook/web-components';
+import { Meta, Story } from '@storybook/web-components';
+import { ifDefined } from 'lit/directives/if-defined.js';
 
 export default {
     title: 'NeonIcon',
     component: 'neon-icon',
     argTypes: {
         text: {
-            name: 'text',
-            defaultValue: 'face',
             control: 'text',
-            description: 'demo',
             type: { name: 'string', required: false }
         },
         size: {
@@ -21,7 +19,7 @@ export default {
             },
         },
     },
-};
+} as Meta;
 
 interface ArgTypes extends IconProps {
     slot?: TemplateResult;
@@ -32,12 +30,12 @@ export const Template: Story<ArgTypes> = ({
     size = 24
     }: ArgTypes) => html`
     <neon-icon
-        .text=${text}
+        text=${text}
         size=${size}
     ></neon-icon>
 `;
 
-export const Primary = Template.bind({});
+export const Primary: Story<ArgTypes> = Template.bind({});
 
 Primary.args  = {
     text: 'warning'

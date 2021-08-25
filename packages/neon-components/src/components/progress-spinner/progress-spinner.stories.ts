@@ -5,7 +5,7 @@ import { Story } from '@storybook/web-components';
 
 export default {
     title: 'NeonSpinner',
-    component: 'neon-spinner',
+    component: 'neon-progress-spinner',
     argTypes: {
         value: { control: 'number' },
     },
@@ -14,8 +14,8 @@ export default {
 export const Primary: Story<ProgressProps> = ({
     value = 5,
     }: ProgressProps) => html`
-    <neon-spinner
+    <neon-progress-spinner
         .value=${value}
     >
-    </neon-spinner>
+    </neon-progress-spinner>
 `;

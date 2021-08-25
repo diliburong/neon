@@ -10,6 +10,9 @@ export interface ButtonProps {
 
 type ButtonLabelColor = 'light' | 'dark';
 
+/**
+ * This neon button
+ */
 @customElement('neon-button')
 export class NeonButton extends Base {
     /**
@@ -29,14 +32,17 @@ export class NeonButton extends Base {
     @property({ reflect: true })
     labelColor?: ButtonLabelColor;
 
-    @property()
+    /**
+     * The button title
+     */
+    @property({ type: String })
     title = 'Somebody';
 
     @property()
     textColor = 'blue';
 
     /**
-     * Render
+     * @render
      */
     render() {
         return html`

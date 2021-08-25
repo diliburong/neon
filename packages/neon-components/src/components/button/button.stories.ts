@@ -8,7 +8,6 @@ export default {
     component: 'neon-button',
     argTypes: {
         title: { control: 'text' },
-        counter: { control: 'number' },
         textColor: { control: 'color' },
     },
 };
@@ -21,14 +20,14 @@ export default {
 // }
 
 interface ArgTypes extends ButtonProps {
-    slot?: TemplateResult;
+    slot: TemplateResult;
 }
 
-export const Template: Story<ArgTypes> = ({
+export const Template: Story<Partial<ArgTypes>> = ({
     title = 'Hello world',
     textColor,
     slot,
-    }: ArgTypes) => html`
+    }: Partial<ArgTypes>) => html`
     <neon-button
         style="--neno-element-text-color: ${textColor || 'black'}"
         .title=${title}

@@ -1,3 +1,8 @@
+// if you want to setCustomElements dont use open-wc story web server
+import { setCustomElements } from '@storybook/web-components';
+import customElements from '../custom-elements.json';
+
+setCustomElements(customElements)
 // export const parameters = {
 //   a11y: {
 //     config: {},

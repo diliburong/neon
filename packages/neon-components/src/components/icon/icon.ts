@@ -5,6 +5,9 @@ import { Base } from '../common/base';
 
 type IconSizeType = 18 | 24 | 36 | 48;
 
+/**
+ * Icon
+ */
 export interface IconProps {
     size: IconSizeType;
     text?: string;
@@ -64,9 +67,11 @@ export class NeonIcon extends Base {
         ];
     }
 
-    @property({ reflect: true })
+    /* tes */
+    @property({ type: Number, reflect: true })
     size: IconSizeType = 24;
 
+    /** Icon type */
     @property({ type: String, reflect: true })
     text = '';
 

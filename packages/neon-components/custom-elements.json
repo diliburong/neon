@@ -4,6 +4,7 @@
     {
       "name": "neon-button",
       "path": "./src/components/button/button.ts",
+      "description": "This neon button",
       "attributes": [
         {
           "name": "labelColor",
@@ -11,6 +12,7 @@
         },
         {
           "name": "title",
+          "description": "The button title",
           "type": "string",
           "default": "\"Somebody\""
         },
@@ -18,10 +20,6 @@
           "name": "textColor",
           "type": "string",
           "default": "\"blue\""
-        },
-        {
-          "name": "timingId",
-          "type": "string | undefined"
         }
       ],
       "properties": [
@@ -33,6 +31,7 @@
         {
           "name": "title",
           "attribute": "title",
+          "description": "The button title",
           "type": "string",
           "default": "\"Somebody\""
         },
@@ -41,16 +40,57 @@
           "attribute": "textColor",
           "type": "string",
           "default": "\"blue\""
+        }
+      ]
+    },
+    {
+      "name": "neon-icon",
+      "path": "./src/components/icon/icon.ts",
+      "attributes": [
+        {
+          "name": "size",
+          "type": "IconSizeType",
+          "default": "24"
         },
         {
-          "name": "styles",
-          "type": "CSSResultGroup[]",
-          "default": "[\"baseStyles\"]"
+          "name": "text",
+          "description": "Icon type",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "size",
+          "attribute": "size",
+          "type": "IconSizeType",
+          "default": "24"
         },
         {
-          "name": "timingId",
-          "attribute": "timingId",
-          "type": "string | undefined"
+          "name": "text",
+          "attribute": "text",
+          "description": "Icon type",
+          "type": "string",
+          "default": "\"\""
+        }
+      ]
+    },
+    {
+      "name": "neon-progress-spinner",
+      "path": "./src/components/progress-spinner/progress-spinner.ts",
+      "attributes": [
+        {
+          "name": "value",
+          "type": "number",
+          "default": "0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "attribute": "value",
+          "type": "number",
+          "default": "0"
         }
       ]
     }

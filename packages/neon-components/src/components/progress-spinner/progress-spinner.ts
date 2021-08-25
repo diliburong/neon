@@ -6,7 +6,7 @@ export interface ProgressProps {
     value: number;
 }
 
-@customElement('neon-spinner')
+@customElement('neon-progress-spinner')
 export class NeonProgressSpinner extends Base {
     /**
      * Static styles
