@@ -1,0 +1,37 @@
+{
+    "processors": [
+        [
+            "stylelint-processor-styled-components",
+            {
+                "moduleName": "lit",
+                "importName": "css",
+                "strict": true
+            }
+        ]
+    ],
+    "extends": [
+        "stylelint-config-standard",
+        "stylelint-config-styled-components"
+    ],
+    "plugins": [
+        "stylelint-order"
+    ],
+    "rules": {
+        "value-keyword-case": ["lower", { "ignoreKeywords": ["dummyValue"] }],
+        "indentation": 4,
+        "number-leading-zero": null,
+        "order/order": [
+            "custom-properties",
+            "declarations",
+            "rules",
+            "at-rules"
+        ],
+        "order/properties-alphabetical-order": true,
+        "no-empty-source": null,
+        "string-quotes": "double",
+        "comment-empty-line-before": null,
+        "declaration-colon-newline-after": null,
+        "no-extra-semicolons": null,
+        "shorthand-property-no-redundant-values": null
+    }
+}

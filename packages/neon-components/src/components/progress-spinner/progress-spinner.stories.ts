@@ -1,4 +1,4 @@
-import { html, TemplateResult } from 'lit-html';
+import { html } from 'lit-html';
 import './progress-spinner';
 import { ProgressProps } from './progress-spinner';
 import { Story } from '@storybook/web-components';

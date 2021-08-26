@@ -1,7 +1,7 @@
-import { css, html } from 'lit';
+import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { Base } from '../common/base';
-
+import { iconStyle } from './icon.css';
 
 type IconSizeType = 18 | 24 | 36 | 48;
 
@@ -21,53 +21,11 @@ export class NeonIcon extends Base {
     static get styles() {
         return [
             super.styles,
-            css`
-                :host{
-                    font-family: 'Material Icons';
-                    font-weight: normal;
-                    font-style: normal;
-                    font-size: 24px;
-                    line-height: 1;
-                    letter-spacing: normal;
-                    text-transform: none;
-                    display: inline-block;
-                    white-space: nowrap;
-                    word-wrap: normal;
-                    direction: ltr;
-
-                    /* Support for IE. */
-                    font-feature-settings: 'liga';
-
-                    /* Support for all WebKit browsers. */
-                    -webkit-font-smoothing: antialiased;
-
-                    /* Support for Safari and Chrome. */
-                    text-rendering: optimizeLegibility;
-
-                    /* Support for Firefox. */
-                    -moz-osx-font-smoothing: grayscale;
-                }
-
-                :host([size="18"]) {
-                    font-size: 18px
-                }
-
-                :host([size="24"]) {
-                    font-size: 24px;
-                }
-
-                :host([size="36"]) {
-                    font-size: 36px;
-                }
-
-                :host([size="48"]) {
-                    font-size: 48px;
-                }
-            `
+            iconStyle
         ];
     }
 
-    /* tes */
+    /* Icon size */
     @property({ type: Number, reflect: true })
     size: IconSizeType = 24;
 

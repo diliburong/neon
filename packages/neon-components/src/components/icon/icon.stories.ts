@@ -2,7 +2,6 @@ import { html, TemplateResult } from 'lit-html';
 import './icon';
 import { IconProps } from './icon';
 import { Meta, Story } from '@storybook/web-components';
-import { ifDefined } from 'lit/directives/if-defined.js';
 
 export default {
     title: 'NeonIcon',
