@@ -7,10 +7,6 @@
       "description": "This neon button",
       "attributes": [
         {
-          "name": "labelColor",
-          "type": "\"light\" | \"dark\" | undefined"
-        },
-        {
           "name": "title",
           "description": "The button title",
           "type": "string",
@@ -20,14 +16,19 @@
           "name": "textColor",
           "type": "string",
           "default": "\"blue\""
+        },
+        {
+          "name": "labelColor",
+          "type": "\"light\" | \"dark\" | undefined"
+        },
+        {
+          "name": "disabled",
+          "description": "Disable flag.",
+          "type": "boolean",
+          "default": "false"
         }
       ],
       "properties": [
-        {
-          "name": "labelColor",
-          "attribute": "labelColor",
-          "type": "\"light\" | \"dark\" | undefined"
-        },
         {
           "name": "title",
           "attribute": "title",
@@ -40,6 +41,22 @@
           "attribute": "textColor",
           "type": "string",
           "default": "\"blue\""
+        },
+        {
+          "name": "labelColor",
+          "attribute": "labelColor",
+          "type": "\"light\" | \"dark\" | undefined"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Disable flag.",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "onClick",
+          "type": "(() => void) | undefined"
         }
       ]
     },

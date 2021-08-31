@@ -1,6 +1,7 @@
-import { css, html } from 'lit';
+import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { Base } from '../common/base';
+import { progressSpinnerStyle } from './progress-spinner.css';
 
 export interface ProgressProps {
     value: number;
@@ -14,11 +15,7 @@ export class NeonProgressSpinner extends Base {
     static get styles() {
         return [
             super.styles,
-            css`
-                p {
-                    color: red;
-                }
-            `
+            progressSpinnerStyle
         ];
     }
 

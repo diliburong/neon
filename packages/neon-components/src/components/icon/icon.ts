@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 import { Base } from '../common/base';
 import { iconStyle } from './icon.css';
 
-type IconSizeType = 18 | 24 | 36 | 48;
+type IconSizeType = 16 | 24 | 36 | 48;
 
 /**
  * Icon

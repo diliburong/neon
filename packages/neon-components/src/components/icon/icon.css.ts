@@ -24,8 +24,8 @@ const iconFontFamily = css`
         word-wrap: normal;
     }
 
-    :host([size="18"]) {
-        font-size: 18px;
+    :host([size="16"]) {
+        font-size: 16px;
     }
 
     :host([size="24"]) {

@@ -12,7 +12,7 @@ export default {
             type: { name: 'string', required: false }
         },
         size: {
-            options: ['18', '24', '36', '48'],
+            options: ['16', '24', '36', '48'],
             control: {
                 type: 'select',
             },
