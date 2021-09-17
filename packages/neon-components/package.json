@@ -14,13 +14,14 @@
     "url": "git+https://github.com/diliburong/neon.git"
   },
   "scripts": {
+    "build": "tsc",
     "analyze": "lit-analyzer './src/**/*.ts'",
     "analyze:wca": "wca wca analyze './src/**/*.ts' --outFile custom-elements.json --format json",
     "storybook": "wds -c .storybook/server.mjs",
     "lint": "yarn eslint && yarn stylelint",
     "eslint": "eslint \"**/*.{js,ts}\" --config .eslintrc  --cache",
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "storybook:webpack": "start-storybook -p 6006",
+    "storybook:webpack": "start-storybook -s ./src/style -p 6006",
     "stylelint": "stylelint \"**/*.{js,ts}\" --cache"
   },
   "bugs": {

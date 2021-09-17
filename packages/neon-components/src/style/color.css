@@ -1,0 +1,4 @@
+:root {
+    --neon-primary-color-500: #696EF5;
+    --neon-primary-color: var(--neon-primary-color-500);
+}

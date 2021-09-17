@@ -16,7 +16,6 @@
     "declaration": true,
     "incremental": true,
     "experimentalDecorators": true,
-    "baseUrl": "./packages",
   },
   "exclude": [
     "node_modules",

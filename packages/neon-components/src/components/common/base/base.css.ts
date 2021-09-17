@@ -347,7 +347,29 @@ const normalizeStyles = css`
     /* stylelint-enable */
 `;
 
+const commonStyle = css`
+    /* stylelint-disable */
+    :host {
+        box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+
+
+    :host {
+        /* font-family: var(--text-family-secondary); */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* stylelint-enable */
+`;
 
 export const baseStyles = css`
     ${normalizeStyles}
+    ${commonStyle}
 `;
