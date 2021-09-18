@@ -1,4 +1,34 @@
 :root {
-    --neon-primary-color-500: #696EF5;
+
+    /* Primary color */
+    --neon-primary-color-300: #bfc6ff;
+    --neon-primary-color-500: #696ef5;
+    --neon-primary-color-700: #302bc2;
     --neon-primary-color: var(--neon-primary-color-500);
+
+    /* Neutral color */
+    --neon-neutral-color-0: #fcfcfc;
+    --neon-neutral-color-50: #e8eef3;
+    --neon-neutral-color-100: #cdd9e3;
+    --neon-neutral-color-200: #acb8c2;
+    --neon-neutral-color-300: #9ba6b0;
+    --neon-neutral-color-400: #89949d;
+    --neon-neutral-color-500: #656f77;
+    --neon-neutral-color-600: #525b62;
+    --neon-neutral-color-700: #3f464c;
+    --neon-neutral-color-800: #191d21;
+
+    /* Dark theme */
+    --neon-background-dark-theme-color: var(--neon-neutral-color-800);
+    --neon-text-dark-theme-color: var(--neon-neutral-color-0);
+
+    /* Light theme */
+    --neon-background-light-theme-color: var(--neon-neutral-color-0);
+    --neon-text-light-theme-color: var(--neon-neutral-color-800);
+
+    /* System color */
+    --neon-system-error-color: #f56969;
+    --neon-system-info-color: #6ba8ef;
+    --neon-system-success-color: #69f588;
+    --neon-system-waring-color: #fbbb5c;
 }
