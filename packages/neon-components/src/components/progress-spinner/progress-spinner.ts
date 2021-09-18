@@ -26,14 +26,24 @@ export class NeonProgressSpinner extends Base {
      */
     render() {
         return html`
-            <svg focusable="false" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100">
+            <svg focusable="false" class="container" viewBox="0 0 48 48">
                 <circle
-                    id="progress"
-                    cx="50%"
-                    cy="50%"
-                    r="45"
+                    class="background"
                     fill="transparent"
-                ></circle>
+                    cx="24px"
+                    cy="24px"
+                    r="20px"
+                    stroke="#343647"
+                    stroke-width="8"
+                />
+                <circle
+                    class="spinner"
+                    fill="transparent"
+                    cx="24px"
+                    cy="24px"
+                    r="20px"
+                    stroke-dasharray=""
+                />
             </svg>
         `;
     }
