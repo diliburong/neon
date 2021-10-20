@@ -1,5 +1,6 @@
 import { html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { classMap } from 'lit/directives/class-map.js';
 import { Base } from '../common/base';
 import { progressSpinnerStyle } from './progress-spinner.css';
 
@@ -19,12 +20,22 @@ export class NeonProgressSpinner extends Base {
         ];
     }
 
-    @property({ type: Number }) value = 0;
+    @property({ type: Number }) value?: number;
 
     /**
      * Render
      */
     render() {
+        const animate = this.value === undefined;
+        const perimeter = Math.PI * 2 * 20;
+        const clampedProgressValue = Math.max(Math.min(this.value || 0, 100), 0);
+        const progressPercent = clampedProgressValue / 100;
+
+        const indicatorClasses = {
+            spinner: true,
+            'spinner-animation': animate
+        };
+
         return html`
             <svg focusable="false" class="container" viewBox="0 0 48 48">
                 <circle
@@ -37,12 +48,13 @@ export class NeonProgressSpinner extends Base {
                     stroke-width="8"
                 />
                 <circle
-                    class="spinner"
+                    class=${classMap(indicatorClasses)}
                     fill="transparent"
                     cx="24px"
                     cy="24px"
                     r="20px"
-                    stroke-dasharray=""
+                    stroke-dasharray=${animate ? undefined : perimeter}
+                    stroke-dashoffset=${animate ? undefined : perimeter - perimeter * progressPercent}
                 />
             </svg>
         `;

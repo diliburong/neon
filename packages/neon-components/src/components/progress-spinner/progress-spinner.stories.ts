@@ -11,7 +11,13 @@ export default {
     },
 };
 
-export const Primary: Story<ProgressProps> = ({
+export const Primary: Story<ProgressProps> = () => html`
+    <neon-progress-spinner
+    >
+    </neon-progress-spinner>
+`;
+
+export const Value: Story<ProgressProps> = ({
     value = 5,
     }: ProgressProps) => html`
     <neon-progress-spinner

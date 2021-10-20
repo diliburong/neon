@@ -6,11 +6,10 @@ const progressBaseStyles = css`
         --progress-stroke-width: 8px;
         --progress-spinner-background-color: var(--neon-neutral-color-800);
         --progress-spinner-color: var(--neon-primary-color);
-    }
 
-    .container {
-        height: 48px;
-        width: 48px;
+        display: inline-block;
+        height: var(--progress-spinner-size, 48px);
+        width: var(--progress-spinner-size, 48px);
     }
 
     .background {
@@ -18,26 +17,19 @@ const progressBaseStyles = css`
     }
 
     .spinner {
-        animation: dash 2s linear 0s infinite normal none running;
         stroke: var(--progress-spinner-color);
         stroke-linecap: round;
         stroke-width: var(--progress-stroke-width);
         transform: rotate(-90deg);
         transform-origin: 50% 50%;
     }
+
+    .spinner-animation {
+        animation: dash 2s linear 0s infinite normal none running;
+    }
 `;
 
 const progressAnimation = css`
-    @keyframes rotate {
-        0% {
-            transform: rotate(0);
-        }
-
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-
     @keyframes dash {
         0% {
             stroke-dasharray: 0.01px, calc(3.14 * 2 * var(--progress-r));
